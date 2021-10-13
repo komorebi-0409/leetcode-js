@@ -10,24 +10,16 @@
  * @param {number} x
  * @return {boolean}
  */
-/* var isPalindrome = function(x) {
-  let s = x.toString(),
-    i = 0
-  while(i < s.length - i - 1) {
-    if (s[i] !== s[s.length - i - 1]){
-      return false
-    }
-    i++
-  }
-  return true
-}; */
+var isPalindrome = function(x) {
+  return x.toString() === x.toString().split("").reverse().join("")
+};
 
 /**
  * 
  * @param {number} x 
  * @return {boolean}
  */
-var isPalindrome = function (x) {
+/* var isPalindrome = function (x) {
   // 小于0返回false
   if (x < 0 || (x % 10 === 0 && x !== 0)) {
     return false
@@ -38,6 +30,6 @@ var isPalindrome = function (x) {
     x = Math.floor(x / 10)
   }
   return x === revertedNumber || x === Math.floor(revertedNumber / 10)
-}
+} */
 // @lc code=end
 
